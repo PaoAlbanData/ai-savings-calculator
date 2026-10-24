@@ -63,13 +63,6 @@ El proyecto se publica automáticamente en GitHub Pages con cada push a `main`, 
 
 Para activarlo en un fork: **Settings → Pages → Source: GitHub Actions**.
 
-## Despliegue alternativo en Vercel
-
-1. Sube el repositorio a GitHub.
-2. En [vercel.com](https://vercel.com/), pulsa **Add New → Project** e importa el repositorio.
-3. Vercel detecta Vite automáticamente (Build Command `npm run build`, Output Directory `dist`).
-4. Pulsa **Deploy**. No hace falta configurar variables de entorno.
-
 ## Fórmulas utilizadas
 
 | Indicador | Fórmula |

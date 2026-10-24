@@ -18,9 +18,6 @@ pnpm-debug.log*
 .env.*
 !.env.example
 
-# Vercel
-.vercel/
-
 # Configuración local de herramientas
 .claude/
 
