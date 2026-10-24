@@ -40,7 +40,7 @@ Todos los cálculos se realizan en el navegador: sin backend, sin base de datos,
 Requisitos: [Node.js](https://nodejs.org/) 20 o superior.
 
 ```bash
-git clone https://github.com/<tu-usuario>/ai-savings-calculator.git
+git clone https://github.com/PaoAlbanData/ai-savings-calculator.git
 cd ai-savings-calculator
 npm install
 npm run dev
