@@ -4,6 +4,8 @@ Aplicación web interactiva que permite a las empresas **estimar cuánto tiempo 
 
 Todos los cálculos se realizan en el navegador: sin backend, sin base de datos, sin APIs de pago y sin enviar datos a ningún servidor.
 
+**🔗 Demo en vivo:** [paoalbandata.github.io/ai-savings-calculator](https://paoalbandata.github.io/ai-savings-calculator/)
+
 > **Nota:** Esta herramienta realiza estimaciones orientativas basadas en los datos y supuestos introducidos. No utiliza un modelo predictivo de inteligencia artificial y sus resultados no garantizan ahorros reales.
 
 ---
@@ -55,7 +57,13 @@ npm run build     # genera la versión de producción en dist/
 npm run preview   # sirve localmente la versión de producción
 ```
 
-## Despliegue en Vercel
+## Despliegue en GitHub Pages
+
+El proyecto se publica automáticamente en GitHub Pages con cada push a `main`, mediante el workflow [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml). La variable `GITHUB_PAGES=true` hace que Vite compile con la ruta base `/ai-savings-calculator/`.
+
+Para activarlo en un fork: **Settings → Pages → Source: GitHub Actions**.
+
+## Despliegue alternativo en Vercel
 
 1. Sube el repositorio a GitHub.
 2. En [vercel.com](https://vercel.com/), pulsa **Add New → Project** e importa el repositorio.
