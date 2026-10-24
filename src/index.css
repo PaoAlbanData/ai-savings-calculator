@@ -1,0 +1,98 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* Azul oscuro corporativo */
+  --color-navy-50: #f1f5fb;
+  --color-navy-100: #dfe8f5;
+  --color-navy-200: #bccfe9;
+  --color-navy-500: #2c4f8f;
+  --color-navy-600: #234177;
+  --color-navy-700: #1b3360;
+  --color-navy-800: #13294b;
+  --color-navy-900: #0c1b33;
+
+  /* Acentos verdes */
+  --color-accent-50: #ecfdf5;
+  --color-accent-100: #d1fae5;
+  --color-accent-500: #10b981;
+  --color-accent-600: #059669;
+  --color-accent-700: #047857;
+
+  --animate-fade-up: fade-up 0.45s ease-out both;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-slate-50 font-sans text-slate-800 antialiased;
+  }
+}
+
+@utility card {
+  @apply rounded-2xl border border-slate-200/80 bg-white shadow-sm;
+}
+
+@utility btn {
+  @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy-500 active:scale-[0.98];
+}
+
+@utility btn-primary {
+  @apply btn bg-navy-800 text-white shadow-sm hover:bg-navy-700;
+}
+
+@utility btn-secondary {
+  @apply btn border border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-50;
+}
+
+/* Slider con el color de marca */
+input[type='range'] {
+  accent-color: var(--color-navy-500);
+  cursor: pointer;
+}
+
+/* Quitar flechas de los inputs numéricos */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media print {
+  @page {
+    margin: 14mm;
+  }
+  body {
+    background: white;
+  }
+  .card {
+    box-shadow: none;
+    break-inside: avoid;
+  }
+}
